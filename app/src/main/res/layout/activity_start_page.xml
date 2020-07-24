@@ -17,7 +17,7 @@
         android:background="@android:color/holo_green_light"
         android:onClick="startPlaying"
         android:padding="80dp"
-        android:text="GO!!"
+        android:text="@string/go"
         android:textColor="@android:color/background_light"
         android:textSize="80sp"
         app:layout_constraintBottom_toBottomOf="parent"

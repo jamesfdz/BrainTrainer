@@ -10,15 +10,12 @@
         android:id="@+id/timerTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
-        android:layout_marginBottom="32dp"
         android:background="@color/buttonBg"
         android:padding="10dp"
         android:text="@string/_30s"
         android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/gridView"
-        app:layout_constraintEnd_toStartOf="@+id/sumTV"
         app:layout_constraintHorizontal_chainStyle="spread_inside"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -27,17 +24,13 @@
         android:id="@+id/scoreTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginEnd="16dp"
         android:background="@color/colorPrimary"
         android:padding="10dp"
         android:text="@string/_0_0"
         android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/gridView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/sumTV"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -45,25 +38,24 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="8dp"
         android:padding="10dp"
         android:text="@string/_11_10"
         android:textAlignment="center"
         android:textSize="30sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/timerTV"
         app:layout_constraintEnd_toStartOf="@+id/scoreTV"
-        app:layout_constraintStart_toEndOf="@+id/timerTV" />
+        app:layout_constraintStart_toEndOf="@+id/timerTV"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <android.support.v7.widget.GridLayout
         android:id="@+id/gridView"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="64dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="32dp"
         app:columnCount="2"
-        app:layout_constraintBottom_toTopOf="@+id/answerTV"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sumTV"
@@ -72,7 +64,7 @@
         <Button
             android:id="@+id/numBtn"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="100dp"
             android:background="@android:color/holo_green_light"
             android:onClick="chooseAnswer"
             android:tag="0"
@@ -87,7 +79,7 @@
         <Button
             android:id="@+id/num1Btn"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="100dp"
             android:background="@android:color/holo_orange_dark"
             android:onClick="chooseAnswer"
             android:tag="1"
@@ -102,7 +94,7 @@
         <Button
             android:id="@+id/num2Btn"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="100dp"
             android:background="@android:color/holo_purple"
             android:onClick="chooseAnswer"
             android:tag="2"
@@ -117,7 +109,7 @@
         <Button
             android:id="@+id/num3Btn"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="100dp"
             android:background="@android:color/holo_blue_bright"
             android:onClick="chooseAnswer"
             android:tag="3"
@@ -137,14 +129,13 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="64dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="32dp"
         android:text="@string/correct"
         android:textAlignment="center"
         android:textSize="36sp"
-        app:layout_constraintBottom_toTopOf="@+id/playAgain"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/gridView" />
 
@@ -166,5 +157,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/answerTV" />
+        app:layout_constraintTop_toBottomOf="@+id/answerTV"
+        app:layout_constraintVertical_bias="1.0" />
 </android.support.constraint.ConstraintLayout>

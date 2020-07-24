@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
             score++;
             mAnswerView.setText("Correct !!!");
         }else{
-            mAnswerView.setText("InCorrect !!!");
+            mAnswerView.setText("Incorrect !!!");
         }
 
         numberOfQuestions++;
